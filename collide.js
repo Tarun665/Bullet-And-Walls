@@ -9,9 +9,11 @@ function isTouching(object1,object2){
     let speed = Math.round(random(223,321));
     let thickness = Math.round(random(22,83));
     let damage =0;
+    let dcontrol = 0;
   // setTimeout(() => {
+    if(dcontrol === 0){
       damage= Math.round(0.5*weigth*speed*speed/(thickness*thickness*thickness));
-
+    }
     //}, 50);
    
   if(object2.x - object1.x < object2.width/2 + object1.width/2 && object1.x - object2.x  < object2.width/2 + object1.width/2 && object2.y - object1.y < object2.height/2 + object1.height/2 && object2.y - object1.y < object2.height/2 + object1.height/2){
